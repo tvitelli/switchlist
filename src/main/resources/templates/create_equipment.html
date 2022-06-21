@@ -50,7 +50,7 @@
             <div class = "form-group">
               <label> Reporting Mark </label>
               <input
-                      type = "text"
+                      type = "text"          <!-- add regex javascript possibly to validate AAAA000000 structure -->
                       name = "reportingMark"
                       th:field = "*{reportingMark}"
                       class = "form-control"
@@ -58,17 +58,8 @@
                       id="validationDefault01" required
               />
             </div>
-            <!--<div class = "form-group">
-              <label> Current Location </label>
-              <input
-                      type = "text"
-                      name = "currentLocation"
-                      th:field = "*{currentLocation}"
-                      class = "form-control"
-                      placeholder = "Enter Current Location"
-              />
-            </div>  -->
-              <div class = "form-group">
+
+            <div class = "form-group">
               <label> Current Location </label>
               <select
                       name = "currentLocation"

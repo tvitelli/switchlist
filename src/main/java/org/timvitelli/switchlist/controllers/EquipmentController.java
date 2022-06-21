@@ -49,6 +49,7 @@ public class EquipmentController {
     public String editEquipmentForm(@PathVariable Integer id, Model model) {
         model.addAttribute("equipment", equipmentService.getEquipmentById(id));
         model.addAttribute("track", trackService.getAllTrack());
+        //allows edit of location and load status of equipment
         return "edit_equipment";
     }
     @PostMapping("/equipment/{id}")
@@ -56,14 +57,14 @@ public class EquipmentController {
         //get equipment from database by id
         Equipment existingEquipment = equipmentService.getEquipmentById(id);
         existingEquipment.setId(id);
-        // existingEquipment.setReportingMark(equipment.getReportingMark());
+        existingEquipment.setReportingMark(equipment.getReportingMark());
         existingEquipment.setCurrentLocation(equipment.getCurrentLocation());
         existingEquipment.setFutureLocation(equipment.getFutureLocation());
         existingEquipment.setLoadStatus(equipment.getLoadStatus());
-        // existingEquipment.setTypeId(equipment.getTypeId());
-        // existingEquipment.setLength(equipment.getLength());
-        // existingEquipment.setOwnerId(equipment.getOwnerId());
-        //save updated equipment
+        existingEquipment.setTypeId(equipment.getTypeId());
+        existingEquipment.setLength(equipment.getLength());
+        existingEquipment.setOwnerId(equipment.getOwnerId());
+        //saves updated equipment
         equipmentService.updateEquipment(existingEquipment);
         return "redirect:/equipment";
 

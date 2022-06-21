@@ -19,7 +19,7 @@ public class TrackController {
         this.trackService = trackService;
     }
 
-    //handler method to handle list students and return model and view
+    //handler method to handle list tracks and return model and view
     @GetMapping("/track")
     public String listTrack(Model model) {
         model.addAttribute("track", trackService.getAllTrack());
@@ -48,7 +48,7 @@ public class TrackController {
         //get track from database by id
         Track existingTrack = trackService.getTrackById(id);
         existingTrack.setId(id);
-        // existingTrack.setTrackName(track.getTrackName());
+        existingTrack.setTrackName(track.getTrackName());
         existingTrack.setLength(track.getLength());
         existingTrack.setLadingType(track.getLadingType());
         //save updated track
