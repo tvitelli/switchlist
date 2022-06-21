@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switchlist</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link th:href="@{SwitchStyle.css}" rel="stylesheet" />
+</head>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Switchlist</a>
+
+    <!-- Toggler/collapsible Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/track}">Track</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/equipment}">Equipment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/equipment/new}">New Equipment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/logout}">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br>
+<br>
+<body>
+<div class = "container">
+    <div class = "row">
+        <div class = "col-lg-6 col-md-6 col-sm-6 container justify-content-center card text-white bg-secondary">
+            <h1 class = "text-center"> Create New Track </h1>
+            <div class = "card-body">
+                <form th:action="@{/track}" th:object = "${track}" method = "POST">
+                    <div class = "form-group">
+                        <div class = "form-group">
+                            <label> Track Name </label>
+                            <input
+                                    type = "text"
+                                    name = "trackName"
+                                    th:field = "*{trackName}"
+                                    class = "form-control"
+                                    placeholder = "Enter Track Name"
+                                    id="validationDefault01" required
+                            />
+                        </div>
+                        <div class = "form-group">
+                            <label> Length </label>
+                            <input
+                                    type = "text"
+                                    name = "length"
+                                    th:field = "*{length}"
+                                    class = "form-control"
+                                    placeholder = "Enter Length in feet"
+                                    id="validationDefault02" required
+                            />
+                        </div>
+                        <div class = "form-group">
+                            <label> Lading Type </label>
+                            <input
+                                    type = "text"
+                                    name = "ladingType"
+                                    th:field = "*{ladingType}"
+                                    class = "form-control"
+                                    placeholder = "Enter Lading Type"
+                                    id="validationDefault03" required
+                            />
+                        </div>
+                        <div class = "box-footer">
+                            <button type = "submit" class = "btn btn-dark">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

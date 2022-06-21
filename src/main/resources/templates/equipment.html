@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switchlist</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link th:href="@{SwitchStyle.css}" rel="stylesheet" />
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Switchlist</a>
+
+    <!-- Toggler/collapsible Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/equipment}">Equipment List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/equipment/new}">New Equipment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/track}">Track</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/logout}">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <h1 class="p-3 mb-2 bg-danger text-white"> Equipment List </h1>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <a th:href="@{/equipment/new}" class="btn btn-dark btn-sm mb-3"> Add Equipment </a>
+        </div>
+    </div>
+    <table class="table table-sm table-striped table-dark table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th> Reporting Mark</th>
+            <th> Current Location</th>
+            <th> Future Location</th>
+            <th> Load Status</th>
+            <th> Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="equipment: ${equipment}">
+            <td th:text="${equipment.reportingMark}"></td>
+            <td th:text="${equipment.currentLocation}"></td>
+            <td th:text="${equipment.futureLocation}"></td>
+            <td th:text="${equipment.loadStatus}"></td>
+            <td>
+                <a th:href="@{/equipment/edit/{id}(id=${equipment.id})}"
+                   class="btn btn-secondary">Update</a>
+                <a th:href="@{/equipment/{id}(id=${equipment.id})}"
+                   class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
