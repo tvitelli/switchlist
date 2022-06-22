@@ -20,8 +20,10 @@ public class TrackController {
         this.trackService = trackService;
     }
 
+    private static final String TRACK = "/track";
+
     //handler method to handle list tracks and return model and view
-    @GetMapping("/track")
+    @GetMapping(TRACK)
     public String listTrack(Model model) {
         model.addAttribute("track", trackService.getAllTrack());
         return "track";
@@ -34,7 +36,7 @@ public class TrackController {
         return "create_track";
     }
 
-    @PostMapping("/track")
+    @PostMapping(TRACK)
     public String saveTrack(@ModelAttribute("track") Track track) {
         trackService.saveTrack(track);
         return "redirect:/track";
