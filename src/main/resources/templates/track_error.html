@@ -38,38 +38,12 @@
     </div>
 </nav>
 <div class="container">
-    <div class="row">
-        <h1 class="p-3 mb-2 bg-danger text-white"> Equipment List </h1>
-    </div>
-    <div class="row">
-        <div class="col-lg-3">
-            <a th:href="@{/equipment/new}" class="btn btn-dark btn-sm mb-3"> Add Equipment </a>
+    <div class="card" >
+        <div class="card-body text-white bg-danger" >
+            <h4> You cannot delete a Track that has Equipment on it. </h4>
+            <h4> Please remove Equipment from the Track before deleting it. </h4>
+            <a class="btn btn-secondary" th:href="@{/equipment}">Return to Equipment List</a>
         </div>
     </div>
-    <table class="table table-sm table-striped table-dark table-bordered">
-        <thead class="table-dark">
-        <tr>
-            <th> Reporting Mark</th>
-            <th> Current Location</th>
-            <th> Future Location</th>
-            <th> Load Status</th>
-            <th> Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="equipment: ${equipment}">
-            <td th:text="${equipment.reportingMark}"></td>
-            <td th:text="${equipment.currentLocation.trackName}"></td>
-            <td th:text="${equipment.futureLocation.trackName}"></td>
-            <td th:text="${equipment.loadStatus}"></td>
-            <td>
-                <a th:href="@{/equipment/edit/{id}(id=${equipment.id})}"
-                   class="btn btn-secondary">Update</a>
-                <a th:href="@{/equipment/{id}(id=${equipment.id})}"
-                   class="btn btn-danger">Delete</a>
-            </td>
-        </tr>
-        </tbody>
-    </table>
 </div>
 </body>

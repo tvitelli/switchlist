@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.timvitelli.switchlist.models.Equipment;
 import org.timvitelli.switchlist.models.Track;
 import org.timvitelli.switchlist.services.TrackService;
 
@@ -56,11 +57,21 @@ public class TrackController {
         return "redirect:/track";
 
     }
+    // set up error page mapping for below delete
+    @GetMapping("/track_error")
+    public String trackError() {
+        return "track_error";
+    }
 
     // delete track by ID
     @GetMapping("/track/{id}")
     public String deleteTrack(@PathVariable Integer id) {
-        trackService.deleteTrackById(id);
-        return "redirect:/track";
+        if (trackService.deleteTrackById(id)) {
+           return "redirect:/track";
+         }
+     else {
+            return "redirect:/track_error";
+        }
     }
+
 }

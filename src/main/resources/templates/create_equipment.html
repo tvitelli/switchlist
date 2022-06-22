@@ -50,7 +50,7 @@
             <div class = "form-group">
               <label> Reporting Mark </label>
               <input
-                      type = "text"          <!-- add regex javascript possibly to validate AAAA000000 structure -->
+                      type = "text"
                       name = "reportingMark"
                       th:field = "*{reportingMark}"
                       class = "form-control"
@@ -67,7 +67,7 @@
                       class = "form-control"
                       placeholder = "Enter Current Location"
               >
-                <option th:each = "track: ${track}" th:value="${track.trackName}" th:text="${track.trackName}"></option>
+                <option th:each = "track: ${track}" th:value="${track.id}" th:text="${track.trackName}"></option>
               </select>
             </div>
 
@@ -79,7 +79,7 @@
                       class = "form-control"
                       placeholder = "Enter Future Location"
               >
-                <option th:each = "track: ${track}" th:value="${track.trackName}" th:text="${track.trackName}"></option>
+                <option th:each = "track: ${track}" th:value="${track.id}" th:text="${track.trackName}"></option>
               </select>
             </div>
             <div class = "form-group">

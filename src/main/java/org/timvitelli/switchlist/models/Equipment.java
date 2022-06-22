@@ -10,10 +10,12 @@ public class Equipment {
     private Integer id;
     @Column(name = "reporting_mark")
     private String reportingMark;
-    @Column(name = "current_location")
-    private String currentLocation;
-    @Column(name = "future_location")
-    private String futureLocation;
+    @ManyToOne
+    @JoinColumn(name = "current_location")
+    private Track currentLocation;
+    @ManyToOne
+    @JoinColumn(name = "future_location")
+    private Track futureLocation;
     @Column(name = "load_status")
     private Boolean loadStatus;
     @Column(name = "type_id")
@@ -55,19 +57,19 @@ public class Equipment {
         this.reportingMark = equipmentId;
     }
 
-    public String getCurrentLocation() {
+    public Track getCurrentLocation() {
         return currentLocation;
     }
 
-    public void setCurrentLocation(String currentLocation) {
+    public void setCurrentLocation(Track currentLocation) {
         this.currentLocation = currentLocation;
     }
 
-    public String getFutureLocation() {
+    public Track getFutureLocation() {
         return futureLocation;
     }
 
-    public void setFutureLocation(String futureLocation) {
+    public void setFutureLocation(Track futureLocation) {
         this.futureLocation = futureLocation;
     }
 

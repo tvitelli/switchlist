@@ -1,19 +1,23 @@
 package org.timvitelli.switchlist.services;
 
 import org.springframework.stereotype.Service;
+import org.timvitelli.switchlist.models.Equipment;
 import org.timvitelli.switchlist.models.Track;
+import org.timvitelli.switchlist.repositories.EquipmentRepository;
 import org.timvitelli.switchlist.repositories.TrackRepository;
 
 import java.util.List;
 
 @Service
-public class TrackServiceImpl implements TrackService{
+public class TrackServiceImpl implements TrackService {
 
     private TrackRepository trackRepository;
+    private EquipmentRepository equipmentRepository;
 
-    public TrackServiceImpl(TrackRepository trackRepository) {
+    public TrackServiceImpl(TrackRepository trackRepository, EquipmentRepository equipmentRepository) {
         super();
         this.trackRepository = trackRepository;
+        this.equipmentRepository = equipmentRepository;
     }
 
     @Override
@@ -38,7 +42,18 @@ public class TrackServiceImpl implements TrackService{
     }
 
     @Override
-    public void deleteTrackById(Integer id) {
-        trackRepository.deleteById(id);
+    public Boolean deleteTrackById(Integer id) {
+        if (!trackInUse(id)) {
+            trackRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
+
+    private Boolean trackInUse(Integer id) {
+        Track track = getTrackById(id);
+        List<Equipment> currentListOfEquipment = equipmentRepository.findEquipmentByCurrentLocation(track);
+        List<Equipment> futureListOfEquipment = equipmentRepository.findEquipmentByFutureLocation(track);
+        return !(currentListOfEquipment.size() == 0 && futureListOfEquipment.size() == 0);
     }
 }

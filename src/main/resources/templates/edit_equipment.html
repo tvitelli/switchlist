@@ -60,11 +60,11 @@
                         <label> Current Location </label>
                         <select
                                 name = "currentLocation"
-                                th:field = "*{currentLocation}"
+                                th:field = "*{currentLocation.trackName}"
                                 class = "form-control"
                                 placeholder = "Enter Current Location"
                         >
-                            <option th:each = "track: ${track}" th:value="${track.trackName}" th:text="${track.trackName}"></option>
+                            <option th:each = "track: ${track}" th:value="${track.id}" th:text="${track.trackName}"></option>
                         </select>
                     </div>
 
@@ -72,11 +72,11 @@
                         <label> Future Location </label>
                         <select
                                 name = "futureLocation"
-                                th:field = "*{futureLocation}"
+                                th:field = "*{futureLocation.trackName}"
                                 class = "form-control"
                                 placeholder = "Enter Future Location"
                         >
-                            <option th:each = "track: ${track}" th:value="${track.trackName}" th:text="${track.trackName}"></option>
+                            <option th:each = "track: ${track}" th:value="${track.id}" th:text="${track.trackName}"></option>
                         </select>
                     </div>
                     <div class = "form-group">

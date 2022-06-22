@@ -19,18 +19,7 @@ public class Track {
     public Track() {
 
     }
-    /* @OneToMany(mappedBy = "equipment",
-            fetch = FetchType.EAGER,
-            cascade = CascadeType.ALL)
-    private List<Track> tracks;
 
-    public List<Track> getTracks() {
-        return tracks;
-    }
-
-    public void setTracks(List<Track> tracks) {
-        this.tracks = tracks;
-    }*/
 
     public Integer getId() {
         return id;

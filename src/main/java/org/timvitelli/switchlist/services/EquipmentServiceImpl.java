@@ -41,4 +41,5 @@ public class EquipmentServiceImpl implements EquipmentService {
     public void deleteEquipmentById(Integer id) {
         equipmentRepository.deleteById(id);
     }
+
 }

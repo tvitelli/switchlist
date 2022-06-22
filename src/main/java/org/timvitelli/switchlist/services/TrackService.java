@@ -15,5 +15,5 @@ public interface TrackService {
 
     Track updateTrack(Track track);
 
-    void deleteTrackById(Integer id);
+    Boolean deleteTrackById(Integer id);
 }

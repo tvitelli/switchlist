@@ -17,7 +17,7 @@ public class EquipmentController {
 
     private EquipmentService equipmentService;
     private TrackService trackService;
-
+    private static final String EQUIPMENT = "/equipment";
     @Autowired
     public EquipmentController(EquipmentService equipmentService, TrackService trackService) {
         super();
@@ -26,7 +26,7 @@ public class EquipmentController {
     }
 
     //handler method to handle list of equipment and return model and view
-    @GetMapping("/equipment")
+    @GetMapping(EQUIPMENT)
     public String listEquipment(Model model) {
         model.addAttribute("equipment", equipmentService.getAllEquipment());
         return "equipment";
@@ -40,7 +40,7 @@ public class EquipmentController {
         return "create_equipment";
     }
 
-    @PostMapping("/equipment")
+    @PostMapping(EQUIPMENT)
     public String saveEquipment(@ModelAttribute("equipment") Equipment equipment) {
         equipmentService.saveEquipment(equipment);
         return "redirect:/equipment";
@@ -58,8 +58,8 @@ public class EquipmentController {
         Equipment existingEquipment = equipmentService.getEquipmentById(id);
         existingEquipment.setId(id);
         existingEquipment.setReportingMark(equipment.getReportingMark());
-        existingEquipment.setCurrentLocation(equipment.getCurrentLocation());
-        existingEquipment.setFutureLocation(equipment.getFutureLocation());
+        existingEquipment.setCurrentLocation(trackService.getTrackById(Integer.parseInt(equipment.getCurrentLocation().getTrackName())));
+        existingEquipment.setFutureLocation(trackService.getTrackById(Integer.parseInt(equipment.getFutureLocation().getTrackName())));
         existingEquipment.setLoadStatus(equipment.getLoadStatus());
         existingEquipment.setTypeId(equipment.getTypeId());
         existingEquipment.setLength(equipment.getLength());
