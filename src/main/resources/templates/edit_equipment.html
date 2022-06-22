@@ -57,7 +57,29 @@
                         />
                     </div>
                     <div class = "form-group">
-                        <label> Current Location </label>
+                        <label>Current Location</label>
+                        <input
+                                type = "text"
+                                name = "currentLocation"
+                                th:field = "*{currentLocation.trackName}"
+                                class = "form-control-plaintext text-white"
+                                placeholder = "No current location"
+                                disabled
+                        />
+                    </div>
+                    <div class = "form-group">
+                        <label>Future Location</label>
+                        <input
+                                type = "text"
+                                name = "futureLocation"
+                                th:field = "*{futureLocation.trackName}"
+                                class = "form-control-plaintext text-white"
+                                placeholder = "No future location"
+                                disabled
+                        />
+                    </div>
+                    <div class = "form-group">
+                        <label> Change Current Location to:</label>
                         <select
                                 name = "currentLocation"
                                 th:field = "*{currentLocation.trackName}"
@@ -69,7 +91,7 @@
                     </div>
 
                     <div class = "form-group">
-                        <label> Future Location </label>
+                        <label> Change Future Location to:</label>
                         <select
                                 name = "futureLocation"
                                 th:field = "*{futureLocation.trackName}"
@@ -108,17 +130,6 @@
                                 th:field = "*{length}"
                                 class = "form-control"
                                 placeholder = "Length"
-                                readonly
-                        />
-                    </div>
-                    <div class = "form-group">
-                        <label> Owner ID </label>
-                        <input
-                                type = "text"
-                                name = "ownerId"
-                                th:field = "*{ownerId}"
-                                class = "form-control"
-                                placeholder = "Owner ID"
                                 readonly
                         />
                     </div>

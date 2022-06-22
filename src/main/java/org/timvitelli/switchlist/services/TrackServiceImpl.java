@@ -28,7 +28,12 @@ public class TrackServiceImpl implements TrackService {
     @Override
     public Track saveTrack(Track track) {
         // Wrap in try-catch with bind exception
-        return trackRepository.save(track);
+        try {
+            return trackRepository.save(track);
+        }catch (Exception e) {
+            System.out.println("Track did not save.");
+        }
+        return null;
     }
 
     @Override

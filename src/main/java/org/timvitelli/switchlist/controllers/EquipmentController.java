@@ -63,7 +63,7 @@ public class EquipmentController {
         existingEquipment.setLoadStatus(equipment.getLoadStatus());
         existingEquipment.setTypeId(equipment.getTypeId());
         existingEquipment.setLength(equipment.getLength());
-        existingEquipment.setOwnerId(equipment.getOwnerId());
+        // existingEquipment.setOwnerId(equipment.getOwnerId());
         //saves updated equipment
         equipmentService.updateEquipment(existingEquipment);
         return "redirect:/equipment";

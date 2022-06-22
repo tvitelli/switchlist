@@ -23,8 +23,13 @@ public class EquipmentServiceImpl implements EquipmentService {
 
     @Override
     public Equipment saveEquipment(Equipment equipment) {
-        // Wrap in try-catch with bind exception also in Track
-        return equipmentRepository.save(equipment);
+        // Wrap in try-catch with bind exception
+        try {
+            return equipmentRepository.save(equipment);
+        }catch (Exception e) {
+            System.out.println("Equipment did not save.");
+        }
+        return null;
     }
 
     @Override
