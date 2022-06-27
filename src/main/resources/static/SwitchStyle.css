@@ -1,5 +1,14 @@
+/*background for app screens*/
 body {
     background-image: url('/images/10406.JPG');
-
     background-size: auto;
+}
+/* changes error message for reporting marks */
+#reportingMarkErr {
+    color: red;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-top: 0px;
+    margin-bottom: 24px;
+    display: none;
 }

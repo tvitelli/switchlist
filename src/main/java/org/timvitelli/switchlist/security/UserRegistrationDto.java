@@ -9,6 +9,8 @@ import javax.validation.constraints.NotEmpty;
         @FieldMatch(first = "email", second = "confirmEmail", message = "The email fields must match")
 })
 public class UserRegistrationDto {
+
+    //validates the user registration form on the Registration page
     @NotEmpty
     private String firstName;
 

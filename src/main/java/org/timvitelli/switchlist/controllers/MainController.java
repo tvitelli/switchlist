@@ -10,6 +10,7 @@ public class MainController {
     public String root() {
         return "redirect:/equipment";
     }
+    // Sends logged in user to main Equipment list page
 
     @GetMapping("/login")
     public String login(Model model) {

@@ -7,6 +7,8 @@ import javax.persistence.Id;
 
 @Entity
 public class Role {
+
+    //class needed for future functionality for Admin screens
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

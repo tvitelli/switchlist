@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity(name = "equipment")
 public class Equipment {
 
+    //Class for holding and retrieving data in the Equipment table in the DB
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

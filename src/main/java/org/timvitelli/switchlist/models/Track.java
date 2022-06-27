@@ -6,6 +6,7 @@ import java.util.List;
 @Entity(name = "track")
 public class Track {
 
+    //Class for holding and retrieving data in the Track table in the DB
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

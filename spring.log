@@ -1,0 +1,768 @@
+2022-06-27 11:11:13.265  INFO 22816 --- [main] o.t.s.repositorytest.UserRepositoryTest  : Starting UserRepositoryTest using Java 17.0.3.1 on AMTK32099 with PID 22816 (started by Dad in C:\Users\Dad\IdeaProjects\switchlist)
+2022-06-27 11:11:13.266  INFO 22816 --- [main] o.t.s.repositorytest.UserRepositoryTest  : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 11:11:13.541  INFO 22816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 11:11:13.598  INFO 22816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 5 JPA repository interfaces.
+2022-06-27 11:11:13.877 DEBUG 22816 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-06-27 11:11:13.888  INFO 22816 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-27 11:11:13.921  INFO 22816 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-27 11:11:14.032  INFO 22816 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-27 11:11:14.139  INFO 22816 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-27 11:11:14.194  INFO 22816 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-27 11:11:14.206  INFO 22816 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-06-27 11:11:14.810  INFO 22816 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-27 11:11:14.815  INFO 22816 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 11:11:14.941 DEBUG 22816 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:14.975 DEBUG 22816 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:15.012 DEBUG 22816 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:15.051 DEBUG 22816 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:15.055 DEBUG 22816 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:15.070 DEBUG 22816 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:15.076 DEBUG 22816 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:15.112 DEBUG 22816 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:15.175 DEBUG 22816 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:15.183 DEBUG 22816 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:15.188 DEBUG 22816 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:15.201 DEBUG 22816 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:15.207 DEBUG 22816 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:15.224 DEBUG 22816 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:15.291  INFO 22816 --- [main] o.t.s.repositorytest.UserRepositoryTest  : Started UserRepositoryTest in 2.423 seconds (JVM running for 3.174)
+2022-06-27 11:11:15.304 DEBUG 22816 --- [main] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.timvitelli.switchlist.repositorytest.UserRepositoryTest.testFindByEmail]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2022-06-27 11:11:15.304 DEBUG 22816 --- [main] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(1705145694<open>)] for JPA transaction
+2022-06-27 11:11:15.307 DEBUG 22816 --- [main] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@1818d00b]
+2022-06-27 11:11:15.308  INFO 22816 --- [main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@1cd629b3 testClass = UserRepositoryTest, testInstance = org.timvitelli.switchlist.repositorytest.UserRepositoryTest@1e4d3ce5, testMethod = testFindByEmail@UserRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@589da3f3 testClass = UserRepositoryTest, locations = '{}', classes = '{class org.timvitelli.switchlist.SwitchlistApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@39d76cb5 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@55a147cc, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3c77d488, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@449a4f23, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7d0b7e3c, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@ba21f7c9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@8519cb4, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@5a7a6d34]; rollback [false]
+2022-06-27 11:11:15.490 DEBUG 22816 --- [main] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:11:15.491 DEBUG 22816 --- [main] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1705145694<open>)]
+2022-06-27 11:11:15.500 DEBUG 22816 --- [main] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(1705145694<open>)] after transaction
+2022-06-27 11:11:15.501  INFO 22816 --- [main] o.s.t.c.transaction.TransactionContext   : Committed transaction for test: [DefaultTestContext@1cd629b3 testClass = UserRepositoryTest, testInstance = org.timvitelli.switchlist.repositorytest.UserRepositoryTest@1e4d3ce5, testMethod = testFindByEmail@UserRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@589da3f3 testClass = UserRepositoryTest, locations = '{}', classes = '{class org.timvitelli.switchlist.SwitchlistApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@39d76cb5 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@55a147cc, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3c77d488, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@449a4f23, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7d0b7e3c, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@ba21f7c9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@8519cb4, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+2022-06-27 11:11:15.509  INFO 22816 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 11:11:15.510  INFO 22816 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-27 11:11:15.513  INFO 22816 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-27 11:11:24.266  INFO 1836 --- [restartedMain] o.t.switchlist.SwitchlistApplication     : Starting SwitchlistApplication using Java 17.0.3.1 on AMTK32099 with PID 1836 (C:\Users\Dad\IdeaProjects\switchlist\target\classes started by Dad in C:\Users\Dad\IdeaProjects\switchlist)
+2022-06-27 11:11:24.267  INFO 1836 --- [restartedMain] o.t.switchlist.SwitchlistApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 11:11:24.295  INFO 1836 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-27 11:11:24.296  INFO 1836 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-27 11:11:24.732  INFO 1836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 11:11:24.783  INFO 1836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 5 JPA repository interfaces.
+2022-06-27 11:11:24.906  INFO 1836 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d93c92ff-97be-3a26-88d6-9943fd30f2ac
+2022-06-27 11:11:25.280  INFO 1836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-27 11:11:25.288  INFO 1836 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-27 11:11:25.288  INFO 1836 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-27 11:11:25.366  INFO 1836 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-27 11:11:25.366  INFO 1836 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1070 ms
+2022-06-27 11:11:25.457 DEBUG 1836 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-06-27 11:11:25.463  INFO 1836 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-27 11:11:25.487  INFO 1836 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-27 11:11:25.558  INFO 1836 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-27 11:11:25.608  INFO 1836 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-27 11:11:25.641  INFO 1836 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-27 11:11:25.648  INFO 1836 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-06-27 11:11:26.085  INFO 1836 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-27 11:11:26.090  INFO 1836 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 11:11:26.142 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:26.168 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:26.201 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:26.239 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:26.280 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:26.290 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:26.291 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:26.304 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:26.306 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:26.320 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:26.325 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:26.335 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:26.372  WARN 1836 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-27 11:11:26.597 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:26.599 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:11:26.671  INFO 1836 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5be0c259, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57ea0e13, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e096ebd, org.springframework.security.web.header.HeaderWriterFilter@4d09d1f6, org.springframework.security.web.csrf.CsrfFilter@6aaa2d3a, org.springframework.security.web.authentication.logout.LogoutFilter@7ca36916, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@51027883, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@33fd0183, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@e02c13, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@45ba87e6, org.springframework.security.web.session.SessionManagementFilter@7bd3f7c, org.springframework.security.web.access.ExceptionTranslationFilter@248342c7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@522f5135]
+2022-06-27 11:11:26.694  INFO 1836 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-27 11:11:26.804  INFO 1836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-27 11:11:26.870  INFO 1836 --- [restartedMain] o.t.switchlist.SwitchlistApplication     : Started SwitchlistApplication in 2.922 seconds (JVM running for 3.402)
+2022-06-27 11:12:10.534  INFO 1836 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-27 11:12:10.534  INFO 1836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-27 11:12:10.535  INFO 1836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-27 11:12:10.585 DEBUG 1836 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:10.771 DEBUG 1836 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:10.810 DEBUG 1836 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:10.810 DEBUG 1836 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:10.810 DEBUG 1836 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:10.817 DEBUG 1836 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:10.818 DEBUG 1836 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:10.818 DEBUG 1836 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:27.493 DEBUG 1836 --- [http-nio-8080-exec-6] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:12:27.494 DEBUG 1836 --- [http-nio-8080-exec-6] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 11:12:27.613 DEBUG 1836 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:27.616 DEBUG 1836 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:27.619 DEBUG 1836 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:27.622 DEBUG 1836 --- [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(351198722<open>)] for JPA transaction
+2022-06-27 11:12:27.623 DEBUG 1836 --- [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:12:27.625 DEBUG 1836 --- [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@57d45688]
+2022-06-27 11:12:27.641 DEBUG 1836 --- [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:12:27.641 DEBUG 1836 --- [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(351198722<open>)]
+2022-06-27 11:12:27.642 DEBUG 1836 --- [http-nio-8080-exec-4] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:12:27.655 DEBUG 1836 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:27.674 DEBUG 1836 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:27.677 DEBUG 1836 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:27.685 DEBUG 1836 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:27.709 DEBUG 1836 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:31.687 DEBUG 1836 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:31.688 DEBUG 1836 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1286118119<open>)] for JPA transaction
+2022-06-27 11:12:31.688 DEBUG 1836 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:12:31.689 DEBUG 1836 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@4df765f5]
+2022-06-27 11:12:31.691 DEBUG 1836 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:12:31.692 DEBUG 1836 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1286118119<open>)]
+2022-06-27 11:12:31.692 DEBUG 1836 --- [http-nio-8080-exec-1] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:12:31.716 DEBUG 1836 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:31.732 DEBUG 1836 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:31.732 DEBUG 1836 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:31.737  WARN 1836 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "SwitchStyle.css"]
+2022-06-27 11:12:31.737  WARN 1836 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "regexReportingMark.js"]
+2022-06-27 11:12:31.737 DEBUG 1836 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:31.737 DEBUG 1836 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:31.741 DEBUG 1836 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:31.741 DEBUG 1836 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:31.769 DEBUG 1836 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:12:31.769 DEBUG 1836 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:42.599 DEBUG 1836 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:42.604 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(2042835176<open>)] for JPA transaction
+2022-06-27 11:13:42.604 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:13:42.605 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@2b95e001]
+2022-06-27 11:13:42.606 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:13:42.606 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(2042835176<open>)]
+2022-06-27 11:13:42.607 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:13:42.607 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(2042835176<open>)] for JPA transaction
+2022-06-27 11:13:42.607 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:13:42.607 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@7880580f]
+2022-06-27 11:13:42.608 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:13:42.608 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(2042835176<open>)]
+2022-06-27 11:13:42.608 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:13:42.609 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(2042835176<open>)] for JPA transaction
+2022-06-27 11:13:42.609 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2022-06-27 11:13:42.609 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@4a7b9788]
+2022-06-27 11:13:42.619 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:13:42.619 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(2042835176<open>)]
+2022-06-27 11:13:42.623 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:13:42.623 DEBUG 1836 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:42.626 DEBUG 1836 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:42.626 DEBUG 1836 --- [http-nio-8080-exec-6] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(370708496<open>)] for JPA transaction
+2022-06-27 11:13:42.626 DEBUG 1836 --- [http-nio-8080-exec-6] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:13:42.626 DEBUG 1836 --- [http-nio-8080-exec-6] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@390c6f15]
+2022-06-27 11:13:42.631 DEBUG 1836 --- [http-nio-8080-exec-6] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:13:42.631 DEBUG 1836 --- [http-nio-8080-exec-6] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(370708496<open>)]
+2022-06-27 11:13:42.631 DEBUG 1836 --- [http-nio-8080-exec-6] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:13:42.637 DEBUG 1836 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:42.651 DEBUG 1836 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:42.653 DEBUG 1836 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:42.660 DEBUG 1836 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:42.674 DEBUG 1836 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:57.574 DEBUG 1836 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:57.575 DEBUG 1836 --- [http-nio-8080-exec-9] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(2076954061<open>)] for JPA transaction
+2022-06-27 11:13:57.575 DEBUG 1836 --- [http-nio-8080-exec-9] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.deleteById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2022-06-27 11:13:57.575 DEBUG 1836 --- [http-nio-8080-exec-9] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@46bf248b]
+2022-06-27 11:13:57.578 DEBUG 1836 --- [http-nio-8080-exec-9] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:13:57.578 DEBUG 1836 --- [http-nio-8080-exec-9] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(2076954061<open>)]
+2022-06-27 11:13:57.582 DEBUG 1836 --- [http-nio-8080-exec-9] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:13:57.583 DEBUG 1836 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:57.585 DEBUG 1836 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:57.585 DEBUG 1836 --- [http-nio-8080-exec-10] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(955861308<open>)] for JPA transaction
+2022-06-27 11:13:57.585 DEBUG 1836 --- [http-nio-8080-exec-10] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:13:57.586 DEBUG 1836 --- [http-nio-8080-exec-10] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@3ab5874d]
+2022-06-27 11:13:57.592 DEBUG 1836 --- [http-nio-8080-exec-10] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:13:57.592 DEBUG 1836 --- [http-nio-8080-exec-10] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(955861308<open>)]
+2022-06-27 11:13:57.593 DEBUG 1836 --- [http-nio-8080-exec-10] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:13:57.598 DEBUG 1836 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:57.611 DEBUG 1836 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:57.612 DEBUG 1836 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:57.616 DEBUG 1836 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:57.626 DEBUG 1836 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:59.918 DEBUG 1836 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:59.918 DEBUG 1836 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(580692325<open>)] for JPA transaction
+2022-06-27 11:13:59.918 DEBUG 1836 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:13:59.919 DEBUG 1836 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@f517b3b]
+2022-06-27 11:13:59.920 DEBUG 1836 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:13:59.920 DEBUG 1836 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(580692325<open>)]
+2022-06-27 11:13:59.921 DEBUG 1836 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:13:59.922 DEBUG 1836 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(580692325<open>)] for JPA transaction
+2022-06-27 11:13:59.922 DEBUG 1836 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:13:59.922 DEBUG 1836 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@548d2efe]
+2022-06-27 11:13:59.923 DEBUG 1836 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:13:59.923 DEBUG 1836 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(580692325<open>)]
+2022-06-27 11:13:59.923 DEBUG 1836 --- [http-nio-8080-exec-3] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:13:59.932 DEBUG 1836 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:59.946 DEBUG 1836 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:59.947  WARN 1836 --- [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "SwitchStyle.css"]
+2022-06-27 11:13:59.947 DEBUG 1836 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:59.948 DEBUG 1836 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:13:59.949 DEBUG 1836 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:17.910 DEBUG 1836 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:17.911 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(909257960<open>)] for JPA transaction
+2022-06-27 11:14:17.911 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:14:17.912 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@2f7cd65e]
+2022-06-27 11:14:17.913 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:14:17.913 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(909257960<open>)]
+2022-06-27 11:14:17.913 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:14:17.913 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(909257960<open>)] for JPA transaction
+2022-06-27 11:14:17.913 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:14:17.913 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@781e99d8]
+2022-06-27 11:14:17.914 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:14:17.914 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(909257960<open>)]
+2022-06-27 11:14:17.914 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:14:17.914 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(909257960<open>)] for JPA transaction
+2022-06-27 11:14:17.914 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:14:17.914 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@7f5a645a]
+2022-06-27 11:14:17.915 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:14:17.915 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(909257960<open>)]
+2022-06-27 11:14:17.915 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:14:17.915 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(909257960<open>)] for JPA transaction
+2022-06-27 11:14:17.915 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2022-06-27 11:14:17.916 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@5b972a2f]
+2022-06-27 11:14:17.917 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:14:17.917 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(909257960<open>)]
+2022-06-27 11:14:17.921 DEBUG 1836 --- [http-nio-8080-exec-2] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:14:17.921 DEBUG 1836 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:17.924 DEBUG 1836 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:17.924 DEBUG 1836 --- [http-nio-8080-exec-6] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1370316280<open>)] for JPA transaction
+2022-06-27 11:14:17.924 DEBUG 1836 --- [http-nio-8080-exec-6] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:14:17.925 DEBUG 1836 --- [http-nio-8080-exec-6] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@50623ce6]
+2022-06-27 11:14:17.928 DEBUG 1836 --- [http-nio-8080-exec-6] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:14:17.928 DEBUG 1836 --- [http-nio-8080-exec-6] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1370316280<open>)]
+2022-06-27 11:14:17.929 DEBUG 1836 --- [http-nio-8080-exec-6] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:14:17.933 DEBUG 1836 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:17.950 DEBUG 1836 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:17.951 DEBUG 1836 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:17.957 DEBUG 1836 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:17.973 DEBUG 1836 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:26.143 DEBUG 1836 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:26.143 DEBUG 1836 --- [http-nio-8080-exec-9] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(887533709<open>)] for JPA transaction
+2022-06-27 11:14:26.143 DEBUG 1836 --- [http-nio-8080-exec-9] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:14:26.144 DEBUG 1836 --- [http-nio-8080-exec-9] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@1c03c887]
+2022-06-27 11:14:26.145 DEBUG 1836 --- [http-nio-8080-exec-9] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:14:26.145 DEBUG 1836 --- [http-nio-8080-exec-9] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(887533709<open>)]
+2022-06-27 11:14:26.145 DEBUG 1836 --- [http-nio-8080-exec-9] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:14:26.149 DEBUG 1836 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:26.163 DEBUG 1836 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:26.164 DEBUG 1836 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:26.168 DEBUG 1836 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:26.182 DEBUG 1836 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:34.533 DEBUG 1836 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:34.534 DEBUG 1836 --- [http-nio-8080-exec-5] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(842949910<open>)] for JPA transaction
+2022-06-27 11:14:34.534 DEBUG 1836 --- [http-nio-8080-exec-5] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:14:34.534 DEBUG 1836 --- [http-nio-8080-exec-5] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@5135dbf8]
+2022-06-27 11:14:34.535 DEBUG 1836 --- [http-nio-8080-exec-5] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:14:34.535 DEBUG 1836 --- [http-nio-8080-exec-5] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(842949910<open>)]
+2022-06-27 11:14:34.536 DEBUG 1836 --- [http-nio-8080-exec-5] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:14:34.542 DEBUG 1836 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:34.544 DEBUG 1836 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:34.547 DEBUG 1836 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:34.564 DEBUG 1836 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:34.565 DEBUG 1836 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:34.569 DEBUG 1836 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:34.584 DEBUG 1836 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:36.254 DEBUG 1836 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:36.254 DEBUG 1836 --- [http-nio-8080-exec-6] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1592388939<open>)] for JPA transaction
+2022-06-27 11:14:36.254 DEBUG 1836 --- [http-nio-8080-exec-6] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:14:36.255 DEBUG 1836 --- [http-nio-8080-exec-6] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@6a2e54d]
+2022-06-27 11:14:36.259 DEBUG 1836 --- [http-nio-8080-exec-6] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:14:36.259 DEBUG 1836 --- [http-nio-8080-exec-6] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1592388939<open>)]
+2022-06-27 11:14:36.259 DEBUG 1836 --- [http-nio-8080-exec-6] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:14:36.263 DEBUG 1836 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:36.277 DEBUG 1836 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:36.278 DEBUG 1836 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:36.283 DEBUG 1836 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:36.294 DEBUG 1836 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:38.605 DEBUG 1836 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:38.605 DEBUG 1836 --- [http-nio-8080-exec-9] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(924659346<open>)] for JPA transaction
+2022-06-27 11:14:38.605 DEBUG 1836 --- [http-nio-8080-exec-9] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:14:38.606 DEBUG 1836 --- [http-nio-8080-exec-9] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@42096771]
+2022-06-27 11:14:38.607 DEBUG 1836 --- [http-nio-8080-exec-9] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:14:38.607 DEBUG 1836 --- [http-nio-8080-exec-9] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(924659346<open>)]
+2022-06-27 11:14:38.607 DEBUG 1836 --- [http-nio-8080-exec-9] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:14:38.611 DEBUG 1836 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:38.625 DEBUG 1836 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:38.626 DEBUG 1836 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:38.629 DEBUG 1836 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:14:38.644 DEBUG 1836 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:46.854 DEBUG 1836 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:46.857 DEBUG 1836 --- [http-nio-8080-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:46.870 DEBUG 1836 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:46.870  WARN 1836 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "SwitchStyle.css"]
+2022-06-27 11:17:46.871 DEBUG 1836 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:46.871 DEBUG 1836 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:46.873 DEBUG 1836 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:48.670 DEBUG 1836 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:48.671 DEBUG 1836 --- [http-nio-8080-exec-7] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(638447543<open>)] for JPA transaction
+2022-06-27 11:17:48.671 DEBUG 1836 --- [http-nio-8080-exec-7] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:17:48.671 DEBUG 1836 --- [http-nio-8080-exec-7] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@45cb51fb]
+2022-06-27 11:17:48.672 DEBUG 1836 --- [http-nio-8080-exec-7] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:17:48.673 DEBUG 1836 --- [http-nio-8080-exec-7] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(638447543<open>)]
+2022-06-27 11:17:48.673 DEBUG 1836 --- [http-nio-8080-exec-7] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:17:48.675 DEBUG 1836 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:48.690 DEBUG 1836 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:48.692 DEBUG 1836 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:48.695 DEBUG 1836 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:48.707 DEBUG 1836 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:50.469 DEBUG 1836 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:50.470 DEBUG 1836 --- [http-nio-8080-exec-10] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1864382838<open>)] for JPA transaction
+2022-06-27 11:17:50.470 DEBUG 1836 --- [http-nio-8080-exec-10] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:17:50.471 DEBUG 1836 --- [http-nio-8080-exec-10] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@39d417e2]
+2022-06-27 11:17:50.471 DEBUG 1836 --- [http-nio-8080-exec-10] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:17:50.471 DEBUG 1836 --- [http-nio-8080-exec-10] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1864382838<open>)]
+2022-06-27 11:17:50.471 DEBUG 1836 --- [http-nio-8080-exec-10] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:17:50.475 DEBUG 1836 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:50.489 DEBUG 1836 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:50.490  WARN 1836 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "SwitchStyle.css"]
+2022-06-27 11:17:50.490 DEBUG 1836 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:50.491 DEBUG 1836 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:50.492 DEBUG 1836 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:55.406 DEBUG 1836 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:55.406 DEBUG 1836 --- [http-nio-8080-exec-5] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(428768838<open>)] for JPA transaction
+2022-06-27 11:17:55.407 DEBUG 1836 --- [http-nio-8080-exec-5] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 11:17:55.407 DEBUG 1836 --- [http-nio-8080-exec-5] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@69baeeed]
+2022-06-27 11:17:55.408 DEBUG 1836 --- [http-nio-8080-exec-5] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 11:17:55.408 DEBUG 1836 --- [http-nio-8080-exec-5] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(428768838<open>)]
+2022-06-27 11:17:55.408 DEBUG 1836 --- [http-nio-8080-exec-5] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 11:17:55.410 DEBUG 1836 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:55.424 DEBUG 1836 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:55.425 DEBUG 1836 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:55.429 DEBUG 1836 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 11:17:55.443 DEBUG 1836 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:04:44.688  INFO 1836 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 13:04:44.699  INFO 1836 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-27 13:04:44.702  INFO 1836 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-27 13:04:44.874  INFO 1836 --- [restartedMain] o.t.switchlist.SwitchlistApplication     : Starting SwitchlistApplication using Java 17.0.3.1 on AMTK32099 with PID 1836 (C:\Users\Dad\IdeaProjects\switchlist\target\classes started by Dad in C:\Users\Dad\IdeaProjects\switchlist)
+2022-06-27 13:04:44.874  INFO 1836 --- [restartedMain] o.t.switchlist.SwitchlistApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 13:04:45.030  INFO 1836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 13:04:45.055 ERROR 1836 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.TypeNotPresentException: Type org.timvitelli.switchlist.models.CarType not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1211) ~[na:na]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:502) ~[spring-core-5.3.20.jar:5.3.20]
+	at org.springframework.core.GenericTypeResolver.buildTypeVariableMap(GenericTypeResolver.java:271) ~[spring-core-5.3.20.jar:5.3.20]
+	at org.springframework.core.GenericTypeResolver.getTypeVariableMap(GenericTypeResolver.java:248) ~[spring-core-5.3.20.jar:5.3.20]
+	at org.springframework.data.util.ClassTypeInformation.getTypeVariableMap(ClassTypeInformation.java:120) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at org.springframework.data.util.ClassTypeInformation.getTypeVariableMap(ClassTypeInformation.java:109) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at org.springframework.data.util.ClassTypeInformation.<init>(ClassTypeInformation.java:96) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330) ~[na:na]
+	at org.springframework.data.util.ClassTypeInformation.from(ClassTypeInformation.java:73) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.<init>(AbstractRepositoryMetadata.java:63) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:50) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:78) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:103) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:159) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport.registerBeanDefinitions(AbstractRepositoryConfigurationSourceSupport.java:62) ~[spring-boot-autoconfigure-2.7.0.jar:2.7.0]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:396) ~[spring-context-5.3.20.jar:5.3.20]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:395) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:157) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.timvitelli.switchlist.SwitchlistApplication.main(SwitchlistApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.0.jar:2.7.0]
+Caused by: java.lang.ClassNotFoundException: org.timvitelli.switchlist.models.CarType
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145) ~[spring-boot-devtools-2.7.0.jar:2.7.0]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	... 45 common frames omitted
+
+2022-06-27 13:04:46.600  INFO 1836 --- [restartedMain] o.t.switchlist.SwitchlistApplication     : Starting SwitchlistApplication using Java 17.0.3.1 on AMTK32099 with PID 1836 (C:\Users\Dad\IdeaProjects\switchlist\target\classes started by Dad in C:\Users\Dad\IdeaProjects\switchlist)
+2022-06-27 13:04:46.601  INFO 1836 --- [restartedMain] o.t.switchlist.SwitchlistApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 13:04:46.785  INFO 1836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 13:04:46.809  INFO 1836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 5 JPA repository interfaces.
+2022-06-27 13:04:46.869  INFO 1836 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d93c92ff-97be-3a26-88d6-9943fd30f2ac
+2022-06-27 13:04:46.937  INFO 1836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-27 13:04:46.938  INFO 1836 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-27 13:04:46.938  INFO 1836 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-27 13:04:46.955  INFO 1836 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-27 13:04:46.955  INFO 1836 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 352 ms
+2022-06-27 13:04:46.990 DEBUG 1836 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-06-27 13:04:46.990  INFO 1836 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-27 13:04:46.994  INFO 1836 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-06-27 13:04:46.997  INFO 1836 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-06-27 13:04:46.997  INFO 1836 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-06-27 13:04:47.134  INFO 1836 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-27 13:04:47.134  INFO 1836 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 13:04:47.155 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:47.155 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:47.168 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:47.180 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:47.185 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:47.191 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:47.192 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:47.204 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:47.206 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:47.222 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:47.227 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:47.237 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:47.251  WARN 1836 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-27 13:04:47.374 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:47.376 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:47.405  INFO 1836 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6e76f395, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6118ad53, org.springframework.security.web.context.SecurityContextPersistenceFilter@6fbf2cab, org.springframework.security.web.header.HeaderWriterFilter@1c692139, org.springframework.security.web.csrf.CsrfFilter@6a46121e, org.springframework.security.web.authentication.logout.LogoutFilter@432489ae, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@d598f34, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d346c5d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7881e02b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5e13043f, org.springframework.security.web.session.SessionManagementFilter@35b30ee1, org.springframework.security.web.access.ExceptionTranslationFilter@2fadac85, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c3a61de]
+2022-06-27 13:04:47.415  INFO 1836 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-27 13:04:47.515  INFO 1836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-27 13:04:47.583  INFO 1836 --- [restartedMain] o.t.switchlist.SwitchlistApplication     : Started SwitchlistApplication in 1.084 seconds (JVM running for 6804.116)
+2022-06-27 13:04:47.585  INFO 1836 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-27 13:04:47.707  INFO 19392 --- [main] o.t.s.servicetest.TrackServiceTest       : Starting TrackServiceTest using Java 17.0.3.1 on AMTK32099 with PID 19392 (started by Dad in C:\Users\Dad\IdeaProjects\switchlist)
+2022-06-27 13:04:47.708  INFO 19392 --- [main] o.t.s.servicetest.TrackServiceTest       : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 13:04:48.241  INFO 19392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 13:04:48.292  INFO 19392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 5 JPA repository interfaces.
+2022-06-27 13:04:48.461  INFO 19392 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=979eda82-a586-3502-8baa-d91502b6de77
+2022-06-27 13:04:48.721 DEBUG 19392 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-06-27 13:04:48.731  INFO 19392 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-27 13:04:48.765  INFO 19392 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-27 13:04:48.883  INFO 19392 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-27 13:04:48.987  INFO 19392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-27 13:04:49.050  INFO 19392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-27 13:04:49.061  INFO 19392 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-06-27 13:04:49.626  INFO 19392 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-27 13:04:49.631  INFO 19392 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 13:04:49.719 DEBUG 19392 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:49.752 DEBUG 19392 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:49.795 DEBUG 19392 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:49.850 DEBUG 19392 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:49.911 DEBUG 19392 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:49.922 DEBUG 19392 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:49.923 DEBUG 19392 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:49.943 DEBUG 19392 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:49.946 DEBUG 19392 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:49.964 DEBUG 19392 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:49.969 DEBUG 19392 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:49.982 DEBUG 19392 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:50.043  WARN 19392 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-27 13:04:50.601 DEBUG 19392 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:50.604 DEBUG 19392 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:04:50.770  INFO 19392 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1512efe9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7cc7e441, org.springframework.security.web.context.SecurityContextPersistenceFilter@2e564c78, org.springframework.security.web.header.HeaderWriterFilter@727de450, org.springframework.security.web.csrf.CsrfFilter@1c15a6aa, org.springframework.security.web.authentication.logout.LogoutFilter@74267ece, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5325674a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@118c1faa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7a491a60, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@bb1b872, org.springframework.security.web.session.SessionManagementFilter@3fe3ebb3, org.springframework.security.web.access.ExceptionTranslationFilter@5c9168c3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e88ad38]
+2022-06-27 13:04:50.923  INFO 19392 --- [main] o.t.s.servicetest.TrackServiceTest       : Started TrackServiceTest in 3.566 seconds (JVM running for 4.416)
+2022-06-27 13:04:51.065  INFO 19392 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 13:04:51.066  INFO 19392 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-27 13:04:51.070  INFO 19392 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-27 13:05:54.272  INFO 6760 --- [main] o.t.s.servicetest.TrackServiceTest       : Starting TrackServiceTest using Java 17.0.3.1 on AMTK32099 with PID 6760 (started by Dad in C:\Users\Dad\IdeaProjects\switchlist)
+2022-06-27 13:05:54.273  INFO 6760 --- [main] o.t.s.servicetest.TrackServiceTest       : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 13:05:54.820  INFO 6760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 13:05:54.877  INFO 6760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 5 JPA repository interfaces.
+2022-06-27 13:05:55.049  INFO 6760 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=979eda82-a586-3502-8baa-d91502b6de77
+2022-06-27 13:05:55.314 DEBUG 6760 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-06-27 13:05:55.325  INFO 6760 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-27 13:05:55.363  INFO 6760 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-27 13:05:55.493  INFO 6760 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-27 13:05:55.612  INFO 6760 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-27 13:05:55.677  INFO 6760 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-27 13:05:55.690  INFO 6760 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-06-27 13:05:56.293  INFO 6760 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-27 13:05:56.299  INFO 6760 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 13:05:56.386 DEBUG 6760 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:05:56.420 DEBUG 6760 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:05:56.464 DEBUG 6760 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:05:56.517 DEBUG 6760 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:05:56.579 DEBUG 6760 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:05:56.591 DEBUG 6760 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:05:56.592 DEBUG 6760 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:05:56.612 DEBUG 6760 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:05:56.615 DEBUG 6760 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:05:56.642 DEBUG 6760 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:05:56.647 DEBUG 6760 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:05:56.661 DEBUG 6760 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:05:56.726  WARN 6760 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-27 13:05:57.263 DEBUG 6760 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:05:57.265 DEBUG 6760 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:05:57.428  INFO 6760 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@981d9d2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ad6448e, org.springframework.security.web.context.SecurityContextPersistenceFilter@139b3a29, org.springframework.security.web.header.HeaderWriterFilter@3398ed12, org.springframework.security.web.csrf.CsrfFilter@727de450, org.springframework.security.web.authentication.logout.LogoutFilter@7e5c8c80, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2319c1e0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74267ece, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@78e59b04, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3da6950f, org.springframework.security.web.session.SessionManagementFilter@66df362c, org.springframework.security.web.access.ExceptionTranslationFilter@4a0f4282, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5325674a]
+2022-06-27 13:05:57.577  INFO 6760 --- [main] o.t.s.servicetest.TrackServiceTest       : Started TrackServiceTest in 3.631 seconds (JVM running for 4.416)
+2022-06-27 13:05:57.728  INFO 6760 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 13:05:57.730  INFO 6760 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-27 13:05:57.733  INFO 6760 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-27 13:18:18.136  INFO 1836 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-27 13:18:18.136  INFO 1836 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-27 13:18:18.137  INFO 1836 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-27 13:18:18.143 DEBUG 1836 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:18:18.155 DEBUG 1836 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:18:18.171 DEBUG 1836 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:18:18.172 DEBUG 1836 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:18:18.172 DEBUG 1836 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:18:18.173 DEBUG 1836 --- [http-nio-8080-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:18:18.173 DEBUG 1836 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:18:18.173 DEBUG 1836 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:18:23.675 DEBUG 1836 --- [http-nio-8080-exec-7] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:18:23.675 DEBUG 1836 --- [http-nio-8080-exec-7] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 13:18:23.763 DEBUG 1836 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:18:23.764 DEBUG 1836 --- [http-nio-8080-exec-8] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(277449038<open>)] for JPA transaction
+2022-06-27 13:18:23.764 DEBUG 1836 --- [http-nio-8080-exec-8] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 13:18:23.764 DEBUG 1836 --- [http-nio-8080-exec-8] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@7491e70e]
+2022-06-27 13:18:23.775 DEBUG 1836 --- [http-nio-8080-exec-8] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 13:18:23.775 DEBUG 1836 --- [http-nio-8080-exec-8] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(277449038<open>)]
+2022-06-27 13:18:23.775 DEBUG 1836 --- [http-nio-8080-exec-8] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2022-06-27 13:18:23.778 DEBUG 1836 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:18:23.795 DEBUG 1836 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:18:23.796 DEBUG 1836 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:18:23.801 DEBUG 1836 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:18:23.813 DEBUG 1836 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:55:33.308 DEBUG 1836 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:55:33.313 DEBUG 1836 --- [http-nio-8080-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:55:33.334 DEBUG 1836 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:55:33.334 DEBUG 1836 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:55:33.334 DEBUG 1836 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:55:33.336 DEBUG 1836 --- [http-nio-8080-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:55:33.336 DEBUG 1836 --- [http-nio-8080-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:55:33.336 DEBUG 1836 --- [http-nio-8080-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:55:35.808 DEBUG 1836 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:55:35.852 DEBUG 1836 --- [http-nio-8080-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:55:35.866 DEBUG 1836 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:55:35.866 DEBUG 1836 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:55:35.866 DEBUG 1836 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:55:35.868 DEBUG 1836 --- [http-nio-8080-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:55:35.869 DEBUG 1836 --- [http-nio-8080-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 13:55:35.870 DEBUG 1836 --- [http-nio-8080-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2022-06-27 14:08:00.436  INFO 1836 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 14:08:00.439  INFO 1836 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-06-27 14:08:00.440  INFO 1836 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-06-27 14:08:00.593  INFO 1836 --- [restartedMain] o.t.switchlist.SwitchlistApplication     : Starting SwitchlistApplication using Java 17.0.3.1 on AMTK32099 with PID 1836 (C:\Users\Dad\IdeaProjects\switchlist\target\classes started by Dad in C:\Users\Dad\IdeaProjects\switchlist)
+2022-06-27 14:08:00.593  INFO 1836 --- [restartedMain] o.t.switchlist.SwitchlistApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 14:08:00.736  INFO 1836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 14:08:00.754  INFO 1836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 5 JPA repository interfaces.
+2022-06-27 14:08:00.795  INFO 1836 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d93c92ff-97be-3a26-88d6-9943fd30f2ac
+2022-06-27 14:08:00.857  INFO 1836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-27 14:08:00.858  INFO 1836 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-27 14:08:00.858  INFO 1836 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-27 14:08:00.879  INFO 1836 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-27 14:08:00.879  INFO 1836 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 284 ms
+2022-06-27 14:08:00.916 DEBUG 1836 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-06-27 14:08:00.917  INFO 1836 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-27 14:08:00.922  INFO 1836 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-06-27 14:08:00.925  INFO 1836 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-06-27 14:08:00.925  INFO 1836 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-06-27 14:08:01.079  INFO 1836 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-27 14:08:01.079  INFO 1836 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 14:08:01.095 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:01.096 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:01.103 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:01.113 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:01.116 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:01.123 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:01.124 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:01.136 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:01.138 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:01.151 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:01.155 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:01.166 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:01.182  WARN 1836 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-27 14:08:01.280 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:01.282 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:01.308  INFO 1836 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@69c4c56e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b8e259a, org.springframework.security.web.context.SecurityContextPersistenceFilter@950cc6, org.springframework.security.web.header.HeaderWriterFilter@f280065, org.springframework.security.web.csrf.CsrfFilter@4f3d2fd1, org.springframework.security.web.authentication.logout.LogoutFilter@135f561b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3d02928d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55d21b52, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ab602a5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53da91c2, org.springframework.security.web.session.SessionManagementFilter@2670fc7e, org.springframework.security.web.access.ExceptionTranslationFilter@17a9d03, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@35c3b7ee]
+2022-06-27 14:08:01.315  INFO 1836 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-27 14:08:01.402  INFO 1836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-27 14:08:01.487  INFO 1836 --- [restartedMain] o.t.switchlist.SwitchlistApplication     : Started SwitchlistApplication in 0.976 seconds (JVM running for 10598.02)
+2022-06-27 14:08:01.488  INFO 1836 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-27 14:08:02.754  INFO 1836 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 14:08:02.754  INFO 1836 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-06-27 14:08:02.755  INFO 1836 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-06-27 14:08:02.878  INFO 1836 --- [restartedMain] o.t.switchlist.SwitchlistApplication     : Starting SwitchlistApplication using Java 17.0.3.1 on AMTK32099 with PID 1836 (C:\Users\Dad\IdeaProjects\switchlist\target\classes started by Dad in C:\Users\Dad\IdeaProjects\switchlist)
+2022-06-27 14:08:02.878  INFO 1836 --- [restartedMain] o.t.switchlist.SwitchlistApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 14:08:03.034  INFO 1836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 14:08:03.053  INFO 1836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 5 JPA repository interfaces.
+2022-06-27 14:08:03.108  INFO 1836 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d93c92ff-97be-3a26-88d6-9943fd30f2ac
+2022-06-27 14:08:03.157  INFO 1836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-27 14:08:03.158  INFO 1836 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-27 14:08:03.158  INFO 1836 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-27 14:08:03.175  INFO 1836 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-27 14:08:03.175  INFO 1836 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 295 ms
+2022-06-27 14:08:03.200 DEBUG 1836 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-06-27 14:08:03.200  INFO 1836 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-27 14:08:03.204  INFO 1836 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2022-06-27 14:08:03.205  INFO 1836 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2022-06-27 14:08:03.206  INFO 1836 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-06-27 14:08:03.297  INFO 22876 --- [main] o.t.s.servicetest.TrackServiceTest       : Starting TrackServiceTest using Java 17.0.3.1 on AMTK32099 with PID 22876 (started by Dad in C:\Users\Dad\IdeaProjects\switchlist)
+2022-06-27 14:08:03.299  INFO 22876 --- [main] o.t.s.servicetest.TrackServiceTest       : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 14:08:03.356  INFO 1836 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-27 14:08:03.356  INFO 1836 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 14:08:03.374 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:03.381 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:03.390 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:03.394 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:03.403 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:03.404 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:03.419 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:03.421 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:03.444 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:03.458 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:03.475 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:03.499  WARN 1836 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-27 14:08:03.618 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:03.624 DEBUG 1836 --- [restartedMain] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:03.653  INFO 1836 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4d43ec62, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e7c0ddf, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ebb9bde, org.springframework.security.web.header.HeaderWriterFilter@10ca09fc, org.springframework.security.web.csrf.CsrfFilter@3e3a231f, org.springframework.security.web.authentication.logout.LogoutFilter@1e1b0e11, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@98ec25c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e9c0456, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e597390, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43328887, org.springframework.security.web.session.SessionManagementFilter@41f67a24, org.springframework.security.web.access.ExceptionTranslationFilter@2e3bcd82, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5bb1512]
+2022-06-27 14:08:03.666  INFO 1836 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-27 14:08:03.755  INFO 1836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-27 14:08:03.821  INFO 1836 --- [restartedMain] o.t.switchlist.SwitchlistApplication     : Started SwitchlistApplication in 1.034 seconds (JVM running for 10600.354)
+2022-06-27 14:08:03.823  INFO 1836 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-27 14:08:04.004  INFO 22876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 14:08:04.067  INFO 22876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 5 JPA repository interfaces.
+2022-06-27 14:08:04.257  INFO 22876 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=979eda82-a586-3502-8baa-d91502b6de77
+2022-06-27 14:08:04.581 DEBUG 22876 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-06-27 14:08:04.596  INFO 22876 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-27 14:08:04.637  INFO 22876 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-27 14:08:04.768  INFO 22876 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-27 14:08:04.886  INFO 22876 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-27 14:08:04.959  INFO 22876 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-27 14:08:04.972  INFO 22876 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-06-27 14:08:05.651  INFO 22876 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-27 14:08:05.658  INFO 22876 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 14:08:05.747 DEBUG 22876 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:05.785 DEBUG 22876 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:05.836 DEBUG 22876 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:05.893 DEBUG 22876 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:05.963 DEBUG 22876 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:05.975 DEBUG 22876 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:05.976 DEBUG 22876 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:06.003 DEBUG 22876 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:06.008 DEBUG 22876 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:06.030 DEBUG 22876 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:06.036 DEBUG 22876 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:06.052 DEBUG 22876 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:06.132  WARN 22876 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-27 14:08:06.812 DEBUG 22876 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:06.815 DEBUG 22876 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:08:07.005  INFO 22876 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@66c32e15, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d387e9b, org.springframework.security.web.context.SecurityContextPersistenceFilter@1ccce165, org.springframework.security.web.header.HeaderWriterFilter@4c941d19, org.springframework.security.web.csrf.CsrfFilter@291522f1, org.springframework.security.web.authentication.logout.LogoutFilter@7f7f544a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5f1a3c4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a20f793, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@543c887, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@304704ae, org.springframework.security.web.session.SessionManagementFilter@601e7c97, org.springframework.security.web.access.ExceptionTranslationFilter@1659d7d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@55cf5626]
+2022-06-27 14:08:07.203  INFO 22876 --- [main] o.t.s.servicetest.TrackServiceTest       : Started TrackServiceTest in 4.308 seconds (JVM running for 5.761)
+2022-06-27 14:08:07.387  INFO 22876 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 14:08:07.389  INFO 22876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-27 14:08:07.392  INFO 22876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-27 14:19:44.691  INFO 22776 --- [main] o.t.s.servicetest.TrackServiceTest       : Starting TrackServiceTest using Java 17.0.3.1 on AMTK32099 with PID 22776 (started by Dad in C:\Users\Dad\IdeaProjects\switchlist)
+2022-06-27 14:19:44.691  INFO 22776 --- [main] o.t.s.servicetest.TrackServiceTest       : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 14:19:45.237  INFO 22776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 14:19:45.292  INFO 22776 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 5 JPA repository interfaces.
+2022-06-27 14:19:45.461  INFO 22776 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=979eda82-a586-3502-8baa-d91502b6de77
+2022-06-27 14:19:45.720 DEBUG 22776 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-06-27 14:19:45.732  INFO 22776 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-27 14:19:45.767  INFO 22776 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-27 14:19:45.887  INFO 22776 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-27 14:19:45.988  INFO 22776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-27 14:19:46.051  INFO 22776 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-27 14:19:46.063  INFO 22776 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-06-27 14:19:46.618  INFO 22776 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-27 14:19:46.623  INFO 22776 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 14:19:46.714 DEBUG 22776 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:19:46.749 DEBUG 22776 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:19:46.792 DEBUG 22776 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:19:46.847 DEBUG 22776 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:19:46.910 DEBUG 22776 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:19:46.921 DEBUG 22776 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:19:46.923 DEBUG 22776 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:19:46.944 DEBUG 22776 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:19:46.947 DEBUG 22776 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:19:46.966 DEBUG 22776 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:19:46.971 DEBUG 22776 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:19:46.992 DEBUG 22776 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:19:47.058  WARN 22776 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-27 14:19:47.608 DEBUG 22776 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:19:47.610 DEBUG 22776 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:19:47.763  INFO 22776 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@600b3bee, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@129348e8, org.springframework.security.web.context.SecurityContextPersistenceFilter@3398ed12, org.springframework.security.web.header.HeaderWriterFilter@80b6098, org.springframework.security.web.csrf.CsrfFilter@5b49b1df, org.springframework.security.web.authentication.logout.LogoutFilter@53b9952f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@67521a79, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66df362c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@139b3a29, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20ad64c, org.springframework.security.web.session.SessionManagementFilter@4a0f4282, org.springframework.security.web.access.ExceptionTranslationFilter@da5b46f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4d529bc0]
+2022-06-27 14:19:47.916  INFO 22776 --- [main] o.t.s.servicetest.TrackServiceTest       : Started TrackServiceTest in 3.547 seconds (JVM running for 4.311)
+2022-06-27 14:19:48.043 DEBUG 22776 --- [main] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 14:19:48.043 DEBUG 22776 --- [main] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(1100576285<open>)] for JPA transaction
+2022-06-27 14:19:48.046 DEBUG 22776 --- [main] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@1cdb290c]
+2022-06-27 14:19:48.064 DEBUG 22776 --- [main] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 14:19:48.064 DEBUG 22776 --- [main] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1100576285<open>)]
+2022-06-27 14:19:48.065 DEBUG 22776 --- [main] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(1100576285<open>)] after transaction
+2022-06-27 14:19:48.084  INFO 22776 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 14:19:48.085  INFO 22776 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-27 14:19:48.087  INFO 22776 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-27 14:20:46.555  INFO 4396 --- [main] o.t.s.servicetest.TrackServiceTest       : Starting TrackServiceTest using Java 17.0.3.1 on AMTK32099 with PID 4396 (started by Dad in C:\Users\Dad\IdeaProjects\switchlist)
+2022-06-27 14:20:46.556  INFO 4396 --- [main] o.t.s.servicetest.TrackServiceTest       : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 14:20:47.103  INFO 4396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 14:20:47.156  INFO 4396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 5 JPA repository interfaces.
+2022-06-27 14:20:47.322  INFO 4396 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=979eda82-a586-3502-8baa-d91502b6de77
+2022-06-27 14:20:47.577 DEBUG 4396 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-06-27 14:20:47.590  INFO 4396 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-27 14:20:47.625  INFO 4396 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-27 14:20:47.740  INFO 4396 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-27 14:20:47.840  INFO 4396 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-27 14:20:47.901  INFO 4396 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-27 14:20:47.913  INFO 4396 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-06-27 14:20:48.470  INFO 4396 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-27 14:20:48.475  INFO 4396 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 14:20:48.563 DEBUG 4396 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:20:48.596 DEBUG 4396 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:20:48.638 DEBUG 4396 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:20:48.694 DEBUG 4396 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:20:48.750 DEBUG 4396 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:20:48.762 DEBUG 4396 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:20:48.763 DEBUG 4396 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:20:48.785 DEBUG 4396 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:20:48.788 DEBUG 4396 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:20:48.805 DEBUG 4396 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:20:48.810 DEBUG 4396 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:20:48.830 DEBUG 4396 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:20:48.895  WARN 4396 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-27 14:20:49.450 DEBUG 4396 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:20:49.452 DEBUG 4396 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:20:49.611  INFO 4396 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@600b3bee, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@129348e8, org.springframework.security.web.context.SecurityContextPersistenceFilter@3398ed12, org.springframework.security.web.header.HeaderWriterFilter@80b6098, org.springframework.security.web.csrf.CsrfFilter@5b49b1df, org.springframework.security.web.authentication.logout.LogoutFilter@53b9952f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@67521a79, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66df362c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@139b3a29, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20ad64c, org.springframework.security.web.session.SessionManagementFilter@4a0f4282, org.springframework.security.web.access.ExceptionTranslationFilter@da5b46f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4d529bc0]
+2022-06-27 14:20:49.765  INFO 4396 --- [main] o.t.s.servicetest.TrackServiceTest       : Started TrackServiceTest in 3.55 seconds (JVM running for 4.335)
+2022-06-27 14:20:49.894 DEBUG 4396 --- [main] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2022-06-27 14:20:49.894 DEBUG 4396 --- [main] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(1100576285<open>)] for JPA transaction
+2022-06-27 14:20:49.897 DEBUG 4396 --- [main] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@1cdb290c]
+2022-06-27 14:20:49.914 DEBUG 4396 --- [main] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2022-06-27 14:20:49.914 DEBUG 4396 --- [main] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1100576285<open>)]
+2022-06-27 14:20:49.914 DEBUG 4396 --- [main] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(1100576285<open>)] after transaction
+2022-06-27 14:20:49.940  INFO 4396 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 14:20:49.941  INFO 4396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-27 14:20:49.945  INFO 4396 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-27 14:32:28.505  INFO 21624 --- [main] o.t.s.servicetest.TrackServiceTest       : Starting TrackServiceTest using Java 17.0.3.1 on AMTK32099 with PID 21624 (started by Dad in C:\Users\Dad\IdeaProjects\switchlist)
+2022-06-27 14:32:28.506  INFO 21624 --- [main] o.t.s.servicetest.TrackServiceTest       : No active profile set, falling back to 1 default profile: "default"
+2022-06-27 14:32:29.056  INFO 21624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-27 14:32:29.108  INFO 21624 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 5 JPA repository interfaces.
+2022-06-27 14:32:29.270  INFO 21624 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=979eda82-a586-3502-8baa-d91502b6de77
+2022-06-27 14:32:29.531 DEBUG 21624 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-06-27 14:32:29.543  INFO 21624 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-27 14:32:29.579  INFO 21624 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-27 14:32:29.700  INFO 21624 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-27 14:32:29.803  INFO 21624 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-27 14:32:29.864  INFO 21624 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-27 14:32:29.876  INFO 21624 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-06-27 14:32:30.453  INFO 21624 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-27 14:32:30.459  INFO 21624 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 14:32:30.550 DEBUG 21624 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:32:30.584 DEBUG 21624 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:32:30.631 DEBUG 21624 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:32:30.687 DEBUG 21624 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:32:30.749 DEBUG 21624 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:32:30.761 DEBUG 21624 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:32:30.762 DEBUG 21624 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:32:30.783 DEBUG 21624 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:32:30.786 DEBUG 21624 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:32:30.805 DEBUG 21624 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:32:30.810 DEBUG 21624 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:32:30.829 DEBUG 21624 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:32:30.889  WARN 21624 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-27 14:32:31.426 DEBUG 21624 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:32:31.428 DEBUG 21624 --- [main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2022-06-27 14:32:31.598  INFO 21624 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@42684d86, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45a05350, org.springframework.security.web.context.SecurityContextPersistenceFilter@74267ece, org.springframework.security.web.header.HeaderWriterFilter@66df362c, org.springframework.security.web.csrf.CsrfFilter@6de4071b, org.springframework.security.web.authentication.logout.LogoutFilter@6cd65042, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@16e0afab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@33986be7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@574413bd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d6a9d5e, org.springframework.security.web.session.SessionManagementFilter@43c20142, org.springframework.security.web.access.ExceptionTranslationFilter@5c1ea00, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2389f546]
+2022-06-27 14:32:31.747  INFO 21624 --- [main] o.t.s.servicetest.TrackServiceTest       : Started TrackServiceTest in 3.551 seconds (JVM running for 4.309)
+2022-06-27 14:32:31.891  INFO 21624 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 14:32:31.893  INFO 21624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-27 14:32:31.895  INFO 21624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

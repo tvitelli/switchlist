@@ -11,6 +11,7 @@ import java.util.List;
 @Service
 public class TrackServiceImpl implements TrackService {
 
+    //Service implements methods for CRUD operations with SwitchlistDB for Equipment and Track tables
     private TrackRepository trackRepository;
     private EquipmentRepository equipmentRepository;
 
@@ -20,6 +21,7 @@ public class TrackServiceImpl implements TrackService {
         this.equipmentRepository = equipmentRepository;
     }
 
+    //retrieves all track rows for Track list page
     @Override
     public List<Track> getAllTrack() {
         return trackRepository.findAll();
@@ -36,16 +38,19 @@ public class TrackServiceImpl implements TrackService {
         return null;
     }
 
+    //sends request to retrieve individual row in Track table based on ID criteria
     @Override
     public Track getTrackById(Integer id) {
         return trackRepository.findById(id).get();
     }
 
+    //sends request to update row in track table
     @Override
     public Track updateTrack(Track track) {
         return trackRepository.save(track);
     }
 
+    //sends request to delete row in track table
     @Override
     public Boolean deleteTrackById(Integer id) {
         if (!trackInUse(id)) {
@@ -55,6 +60,7 @@ public class TrackServiceImpl implements TrackService {
         return false;
     }
 
+    //implements data check using custom queries from EquipmentRepository to verify Track is not referenced
     private Boolean trackInUse(Integer id) {
         Track track = getTrackById(id);
         List<Equipment> currentListOfEquipment = equipmentRepository.findEquipmentByCurrentLocation(track);

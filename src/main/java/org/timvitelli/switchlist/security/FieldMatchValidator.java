@@ -7,6 +7,7 @@ public class FieldMatchValidator implements ConstraintValidator<FieldMatch, Obje
     private String firstFieldName;
     private String secondFieldName;
 
+    //custom validator to implement javax.ConstraintValidator methods to match field contents
     @Override
     public void initialize(final FieldMatch constraintAnnotation) {
         firstFieldName = constraintAnnotation.first();

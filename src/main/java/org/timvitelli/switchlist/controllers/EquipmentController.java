@@ -1,16 +1,15 @@
 package org.timvitelli.switchlist.controllers;
 
-import org.springframework.beans.BeanUtils;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.timvitelli.switchlist.models.Equipment;
-import org.timvitelli.switchlist.models.Track;
 import org.timvitelli.switchlist.services.EquipmentService;
 import org.timvitelli.switchlist.services.TrackService;
 
-import java.util.List;
+
 
 @Controller
 public class EquipmentController {
@@ -39,12 +38,13 @@ public class EquipmentController {
         model.addAttribute("track", trackService.getAllTrack());
         return "create_equipment";
     }
-
+    // Saves equipment row to DB after data is entered in Create Equipment app page
     @PostMapping(EQUIPMENT)
     public String saveEquipment(@ModelAttribute("equipment") Equipment equipment) {
         equipmentService.saveEquipment(equipment);
         return "redirect:/equipment";
     }
+    //Retrieves equipment row based on unique ID and pulls track it is associated with
     @GetMapping("/equipment/edit/{id}")
     public String editEquipmentForm(@PathVariable Integer id, Model model) {
         model.addAttribute("equipment", equipmentService.getEquipmentById(id));
@@ -52,6 +52,7 @@ public class EquipmentController {
         //allows edit of location and load status of equipment
         return "edit_equipment";
     }
+    // method to update equipment row in DB from data entered Update Equipment page in app
     @PostMapping("/equipment/{id}")
     public String updateEquipment(@PathVariable Integer id, @ModelAttribute("equipment") Equipment equipment, Model model) {
         //get equipment from database by id
@@ -69,6 +70,7 @@ public class EquipmentController {
         return "redirect:/equipment";
 
     }
+    // Below method to delete equipment row from database by ID
     @GetMapping("/equipment/{id}")
     public String deleteEquipment(@PathVariable Integer id) {
         equipmentService.deleteEquipmentById(id);

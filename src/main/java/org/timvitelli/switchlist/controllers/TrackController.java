@@ -35,7 +35,7 @@ public class TrackController {
         model.addAttribute("track", track);
         return "create_track";
     }
-
+    // Saves track row to DB after data is entered in Create Track app page
     @PostMapping(TRACK)
     public String saveTrack(@ModelAttribute("track") Track track) {
         trackService.saveTrack(track);
@@ -46,6 +46,7 @@ public class TrackController {
         model.addAttribute("track", trackService.getTrackById(id));
         return "edit_track";
     }
+    // method to update track row in DB from data entered Update Track page in app
     @PostMapping("/track/{id}")
     public String updateTrack(@PathVariable Integer id, @ModelAttribute("track") Track track, Model model) {
         //get track from database by id

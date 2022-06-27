@@ -14,6 +14,7 @@ import org.timvitelli.switchlist.services.UserService;
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
+    //implements the Spring Security Form Authorization framework
     @Autowired
     private UserService userService;
 

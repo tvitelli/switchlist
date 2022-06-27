@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity(name = "types")
 public class CarType {
 
+    //Currently unused Class - needed for future enhancements
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

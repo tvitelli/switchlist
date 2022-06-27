@@ -6,6 +6,7 @@ import java.util.List;
 @Entity(name = "trains")
 public class Train {
 
+    //Currently unused Class - needed for future enhancements
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

@@ -1,4 +1,4 @@
-
+<!-- javascript to validate reporting mark field entry using regex validation string -->
 let reportingMark = document.getElementById('reportingMark');
 let equipment = document.getElementById('equipment');
 let reportingMarkErr = document.getElementById('reportingMarkErr');

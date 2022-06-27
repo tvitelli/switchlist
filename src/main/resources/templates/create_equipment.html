@@ -39,6 +39,7 @@
 </nav>
 <br>
 <br>
+<!-- Create Equipment input form in card style -->
 <body>
 <div class = "container">
   <div class = "row">
@@ -54,11 +55,12 @@
                       name = "reportingMark"
                       th:field = "*{reportingMark}"
                       class = "form-control"
-                      placeholder = "Enter Reporting Mark"
-                      id="validationDefault01" required
+                      placeholder = "Enter Reporting Mark in format AAAA000000"
+                      pattern="(^([A-Z]{2,4})([0-9]{1,6})$)"
+                      id="reportingMark" required
               />
             </div>
-
+            <!-- Uses a drop down list for choosing from Track DB -->
             <div class = "form-group">
               <label> Current Location </label>
               <select
@@ -70,7 +72,7 @@
                 <option th:each = "track: ${track}" th:value="${track.id}" th:text="${track.trackName}"></option>
               </select>
             </div>
-
+            <!-- Uses a drop down list for choosing from Track DB -->
             <div class = "form-group">
               <label> Future Location </label>
               <select
@@ -139,4 +141,5 @@
   </div>
 </div>
 </body>
+<script src="regexReportingMark.js"></script>
 </html>

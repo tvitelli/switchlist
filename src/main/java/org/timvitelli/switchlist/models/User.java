@@ -5,15 +5,17 @@ import java.util.Collection;
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User {
+
+    //Class for holding and retrieving data in the User table in the DB
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private String firstName;
     private String lastName;
     private String email;
     private String password;
 
+    //foreign key relationships mapped to Role for user lookup of privileges
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
             name = "users_roles",
@@ -25,7 +27,7 @@ public class User {
 
     public User() {
     }
-
+    //constructors for getting logon and registration data for entry page
     public User(String firstName, String lastName, String email, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -40,7 +42,7 @@ public class User {
         this.password = password;
         this.roles = roles;
     }
-
+    //getters and setters for methods
     public Long getId() {
         return id;
     }

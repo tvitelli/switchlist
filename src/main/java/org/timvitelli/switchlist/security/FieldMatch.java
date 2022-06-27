@@ -9,6 +9,7 @@ import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
 import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
+//custom method to implement field matching for registration fields, user id and email entries
 @Target({TYPE, ANNOTATION_TYPE})
 @Retention(RUNTIME)
 @Constraint(validatedBy = FieldMatchValidator.class)
